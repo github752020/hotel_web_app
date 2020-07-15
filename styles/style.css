@@ -1,0 +1,336 @@
+/*
+filename: assign1.zip
+author: Quinn Chan
+created: 23/3/2020
+last modified: 5/4/2020
+description: COS60004 Assignment 1
+*/
+.errMsg {
+  background-color: yellow;
+  color: red;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.manager {
+  border: 1;
+  padding: 10px;
+  margin: 10px;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  overflow: auto;
+}
+
+header {
+  width: 100%;
+  height: 20px;
+  font-size: 15px;
+  background-color: black;
+  color: lightgray;
+  clear: both;
+}
+.alignleft{
+  line-height: 1;
+  margin: 0;
+  float:left;
+}
+.alignright{
+  line-height: 1;
+  margin: 0;
+  float: right;
+}
+nav {
+  width: 100%;
+  background-color: grey;
+  text-align: right;
+  padding-right: 20px;
+  clear: both;
+}
+
+nav a {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-property: width;
+  transition-duration: 1s;
+}
+nav a:target, nav a:hover{
+  text-decoration: none;
+  width:180px;
+  color: white
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 10px;
+   bottom: 0;
+  vertical-align: baseline;
+  clear: both;
+ position: relative;
+ height: 30px;
+ margin-top: -30px;
+}
+
+#bgimg {
+  background-position: center;
+  background-size: auto;
+  background-image: url("images/background.jpg");
+  height: 65%;
+  text-align: center;
+  vertical-align: middle;
+}
+#maintext {
+  color: white;
+  font-size: 70px;
+  text-align: left;
+  margin: auto;
+}
+.main {
+  margin: 5% auto;
+  width:60%;
+  padding:60px 20px;
+  background-color: lightgray;
+}
+/*payment*/
+#total {
+  font-weight: bolder;
+  font-size: 20px;
+  color: red;
+}
+
+/*enquire*/
+@media (min-width: 768px) {
+  .row.equal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+#eqimg {
+  width:58%;
+  background-image: url(images/trees.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: right;
+  color: white;
+  font-weight: 600;
+}
+#eqimg h1{margin-top: 0;}
+#form {
+  padding: 10px 10px 50px 20px;
+  width: 40%;
+}
+.btn {margin-bottom: 10%}
+/*product*/
+
+#slides{
+	position: relative;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+
+	-webkit-transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	-o-transition: opacity 2s;
+	transition: opacity 2s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+
+.slide{
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+	background: #333;
+	color: #fff;
+
+  background-size: cover;
+}
+
+
+.slide:nth-of-type(1){
+	background-color: red;
+  background-image: url("images/1hotelsouthbeach.jpg");
+}
+
+
+.slide:nth-of-type(2){
+	background-color: orange;
+  background-image: url('images/cham.jpg');
+  background-position: center;
+}
+
+.slide:nth-of-type(3){
+	background-color: green;
+  background-image: url('images/wine2.jpg');
+  background-position: center;
+}
+
+.slide:nth-of-type(4){
+	background-color: green;
+  background-image: url('images/massage.jpg');
+}
+
+
+
+
+
+#product {
+  height: 100%;
+  position: fixed;
+  float: right;
+  right: 0;
+  top: 0;
+  overflow-x: hidden;
+  z-index: -1;
+  width:25%;
+  background-image: url("images/1hotelsouthbeach.jpg");
+  background-position: center;
+  background-size: cover;
+  border: solid 1px black;
+}
+#producttext{
+  padding:0 5%;
+  width: 60%;
+}
+#producttext h1, .room h1,#eqimg h1{
+  font-size: 90px;
+}
+#producttext li {
+  display: inline-block;
+  margin: 10px;
+}
+.options {
+   text-align: left;
+   font-weight:bolder;
+   padding-left: 20px;
+}
+.room {
+  width: 60%;
+  padding: 5%;
+  text-align: center;
+  border-top: solid 2px grey;
+}
+.price {
+ margin: 5%;
+ letter-spacing: 7px;
+}
+.features {
+  text-align: left;
+  margin: 5% 0;
+  padding: 10px;
+  background-color: white;
+}
+.features caption {
+  background-color: lightgray;
+}
+
+/*about elements*/
+dl {
+  color: blue;
+  font-weight: bold;
+}
+#max {
+  float:right;
+  border: double;
+  padding: 20px;
+  width: 100%;
+}
+.center {
+  margin: 0 0 10% 0 ;
+}
+caption {
+  caption-side: top;
+  font-weight: bolder;
+  text-align: center;
+}
+.time {
+  background-color: #d4d4aa;
+  font-weight: bold;}
+
+.time th {
+  width:8%;
+}
+  .table-info {
+    background-color: #dfbe9f;
+  }
+  .nothing {
+    background-color: #bfbfbf;
+  }
+  .COS60006 {
+    background-color: #9fbfdf;
+  }
+  .COS60004 {
+    background-color: #df9fbf;
+  }
+  .COS60009 {
+    background-color: #9fdfcf;
+  }
+  .INF60007 {
+    background-color: #cfdf9f;
+  }
+
+/*enhancements*/
+.thumbnails {
+  width:150px;
+}
+
+/*Responsive design*/
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+ .main, #eqimg, #form, .room, #product, #producttext{
+    width:100%;
+
+  }
+  #bgimg, #product,#eqimg {
+    height: 300px;
+    position: relative;
+    background-size: cover;
+  }
+  #maintext, #producttext h1, .room h1 {font-size: 30px;
+}
+  header {
+    font-size: 12px;
+  }
+  nav {text-align: left;}
+}
+@media screen and (min-width: 620px) and (max-width:800px) {
+  #bgimg, #eqimg, #form, #product {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+  }
+  .room, #producttext {width: 100%;}
+}
